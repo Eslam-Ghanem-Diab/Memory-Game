@@ -12,7 +12,7 @@ let startBtn = document.querySelector(".control-buttons span"),
     allFlipedBlocks,
     stopClicking,
     mathcing,
-    gameDuration = 10,
+    gameDuration = 60,
     minusGameDuration,
     myIntervalTime;
 
@@ -20,7 +20,7 @@ console.log(blocksElments);
 console.log(orderRange);
 
 startBtn.onclick = () => {
-    userName = prompt("Enter Your name to start the game ");
+    userName = prompt("Let's play Write your name Ya Fofa! ");
     if (userName === "" || userName == null) {
         hello.innerHTML = "Unknown"
     } else {
@@ -103,7 +103,6 @@ mathcing = (firstBlock, secondBlock) => {
 myIntervalTime = () => {
     minusGameDuration = setInterval(() => {
         gameDuration--
-        console.log(gameDuration);
         gmaeTime.innerHTML = gameDuration
         if (gameDuration === 0) {
             clearInterval(minusGameDuration)
@@ -113,7 +112,7 @@ myIntervalTime = () => {
                 block.classList.remove("is-flipped", "has-matched")
             })
             tries.innerHTML = "0" 
-            gameDuration = 10
+            gameDuration = 60
             gmaeTime.innerHTML = gameDuration
             shuffle(orderRange)
             blocksElments.forEach((block, index) => {
