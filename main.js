@@ -20,7 +20,7 @@ console.log(blocksElments);
 console.log(orderRange);
 
 startBtn.onclick = () => {
-    userName = prompt("Let's play Write your name Ya Fofa! ");
+    userName = prompt(" Enter You name  ");
     if (userName === "" || userName == null) {
         hello.innerHTML = "Unknown"
     } else {
